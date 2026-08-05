@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, Phone, ChevronDown, CalendarCheck, LayoutDashboard } from "lucide-react";
+import { Menu, Phone, ChevronDown, LayoutDashboard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -83,7 +83,7 @@ export function Header() {
           <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex">
             <Link to="/demo-admin">
               <LayoutDashboard className="size-4" />
-              Check your dates
+              View admin dashboard
             </Link>
           </Button>
           <a
@@ -94,9 +94,9 @@ export function Header() {
             {PHONE}
           </a>
           <Button asChild variant="default" size="sm" className="hidden sm:inline-flex">
-            <Link to="/contact">
-              <CalendarCheck className="size-4" />
-              Check Your Date
+            <Link to="/demo-admin">
+              <LayoutDashboard className="size-4" />
+              ADMIN
             </Link>
           </Button>
           <a href={PHONE_HREF} className="sm:hidden" aria-label={`Call ${PHONE}`}>
@@ -170,14 +170,15 @@ export function Header() {
                   </Link>
                 </MobileGroup>
                 <Button asChild size="lg" className="w-full">
-                  <Link to="/contact" onClick={() => setOpen(false)}>
-                    Check Your Date
+                  <Link to="/demo-admin" onClick={() => setOpen(false)}>
+                    <LayoutDashboard className="size-4" />
+                    ADMIN
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="w-full">
                   <Link to="/demo-admin" onClick={() => setOpen(false)}>
                     <LayoutDashboard className="size-4" />
-                    Check your dates
+                    View admin dashboard
                   </Link>
                 </Button>
               </div>
