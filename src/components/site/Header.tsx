@@ -83,7 +83,7 @@ export function Header() {
           <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex">
             <Link to="/demo-admin">
               <LayoutDashboard className="size-4" />
-              View admin dashboard
+              Check your dates
             </Link>
           </Button>
           <a
@@ -177,7 +177,7 @@ export function Header() {
                 <Button asChild variant="outline" size="lg" className="w-full">
                   <Link to="/demo-admin" onClick={() => setOpen(false)}>
                     <LayoutDashboard className="size-4" />
-                    View admin dashboard
+                    Check your dates
                   </Link>
                 </Button>
               </div>
