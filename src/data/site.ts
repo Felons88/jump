@@ -92,7 +92,9 @@ function item(
   };
 }
 
-export const categories: Category[] = [
+import { categories } from "./site-scraped";
+
+const _legacyCategories: Category[] = [
   {
     slug: "bounce-houses",
     name: "Bounce Houses",
@@ -617,6 +619,8 @@ export const categories: Category[] = [
 export function getCategory(slug: string) {
   return categories.find((c) => c.slug === slug);
 }
+
+export { categories };
 
 export const homeCategorySlugs = [
   "bounce-houses",
