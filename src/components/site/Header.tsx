@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, Phone, ChevronDown, CalendarCheck } from "lucide-react";
+import { Menu, Phone, ChevronDown, CalendarCheck, LayoutDashboard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -80,6 +80,12 @@ export function Header() {
 
         <div className="flex shrink-0 items-center gap-2">
           <CartDrawer />
+          <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex">
+            <Link to="/demo-admin">
+              <LayoutDashboard className="size-4" />
+              View admin dashboard
+            </Link>
+          </Button>
           <a
             href={PHONE_HREF}
             className="hidden items-center gap-2 rounded-full px-3 py-2 text-sm font-extrabold text-secondary hover:bg-muted sm:flex"
@@ -166,6 +172,12 @@ export function Header() {
                 <Button asChild size="lg" className="w-full">
                   <Link to="/contact" onClick={() => setOpen(false)}>
                     Check Your Date
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="w-full">
+                  <Link to="/demo-admin" onClick={() => setOpen(false)}>
+                    <LayoutDashboard className="size-4" />
+                    View admin dashboard
                   </Link>
                 </Button>
               </div>
